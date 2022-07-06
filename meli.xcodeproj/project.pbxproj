@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6FD3F5A82875EE4800015B75 /* meliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD3F5A72875EE4800015B75 /* meliApp.swift */; };
+		6FD3F5AA2875EE4800015B75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD3F5A92875EE4800015B75 /* ContentView.swift */; };
+		6FD3F5AC2875EE4A00015B75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD3F5AB2875EE4A00015B75 /* Assets.xcassets */; };
+		6FD3F5AF2875EE4A00015B75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD3F5AE2875EE4A00015B75 /* Preview Assets.xcassets */; };
+		6FD3F5B92875EE4A00015B75 /* meliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD3F5B82875EE4A00015B75 /* meliTests.swift */; };
+		6FD3F5C32875EE4A00015B75 /* meliUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD3F5C22875EE4A00015B75 /* meliUITests.swift */; };
+		6FD3F5C52875EE4A00015B75 /* meliUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD3F5C42875EE4A00015B75 /* meliUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6FD3F5B52875EE4A00015B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FD3F59C2875EE4800015B75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FD3F5A32875EE4800015B75;
+			remoteInfo = meli;
+		};
+		6FD3F5BF2875EE4A00015B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FD3F59C2875EE4800015B75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FD3F5A32875EE4800015B75;
+			remoteInfo = meli;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6FD3F5A42875EE4800015B75 /* meli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meli.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD3F5A72875EE4800015B75 /* meliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meliApp.swift; sourceTree = "<group>"; };
+		6FD3F5A92875EE4800015B75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6FD3F5AB2875EE4A00015B75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FD3F5AE2875EE4A00015B75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6FD3F5B42875EE4A00015B75 /* meliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD3F5B82875EE4A00015B75 /* meliTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meliTests.swift; sourceTree = "<group>"; };
+		6FD3F5BE2875EE4A00015B75 /* meliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD3F5C22875EE4A00015B75 /* meliUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meliUITests.swift; sourceTree = "<group>"; };
+		6FD3F5C42875EE4A00015B75 /* meliUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meliUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FD3F5A12875EE4800015B75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD3F5B12875EE4A00015B75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD3F5BB2875EE4A00015B75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FD3F59B2875EE4800015B75 = {
+			isa = PBXGroup;
+			children = (
+				6FD3F5A62875EE4800015B75 /* meli */,
+				6FD3F5B72875EE4A00015B75 /* meliTests */,
+				6FD3F5C12875EE4A00015B75 /* meliUITests */,
+				6FD3F5A52875EE4800015B75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6FD3F5A52875EE4800015B75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FD3F5A42875EE4800015B75 /* meli.app */,
+				6FD3F5B42875EE4A00015B75 /* meliTests.xctest */,
+				6FD3F5BE2875EE4A00015B75 /* meliUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FD3F5A62875EE4800015B75 /* meli */ = {
+			isa = PBXGroup;
+			children = (
+				6FD3F5A72875EE4800015B75 /* meliApp.swift */,
+				6FD3F5A92875EE4800015B75 /* ContentView.swift */,
+				6FD3F5AB2875EE4A00015B75 /* Assets.xcassets */,
+				6FD3F5AD2875EE4A00015B75 /* Preview Content */,
+			);
+			path = meli;
+			sourceTree = "<group>";
+		};
+		6FD3F5AD2875EE4A00015B75 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6FD3F5AE2875EE4A00015B75 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6FD3F5B72875EE4A00015B75 /* meliTests */ = {
+			isa = PBXGroup;
+			children = (
+				6FD3F5B82875EE4A00015B75 /* meliTests.swift */,
+			);
+			path = meliTests;
+			sourceTree = "<group>";
+		};
+		6FD3F5C12875EE4A00015B75 /* meliUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6FD3F5C22875EE4A00015B75 /* meliUITests.swift */,
+				6FD3F5C42875EE4A00015B75 /* meliUITestsLaunchTests.swift */,
+			);
+			path = meliUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FD3F5A32875EE4800015B75 /* meli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FD3F5C82875EE4A00015B75 /* Build configuration list for PBXNativeTarget "meli" */;
+			buildPhases = (
+				6FD3F5A02875EE4800015B75 /* Sources */,
+				6FD3F5A12875EE4800015B75 /* Frameworks */,
+				6FD3F5A22875EE4800015B75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = meli;
+			productName = meli;
+			productReference = 6FD3F5A42875EE4800015B75 /* meli.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FD3F5B32875EE4A00015B75 /* meliTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FD3F5CB2875EE4A00015B75 /* Build configuration list for PBXNativeTarget "meliTests" */;
+			buildPhases = (
+				6FD3F5B02875EE4A00015B75 /* Sources */,
+				6FD3F5B12875EE4A00015B75 /* Frameworks */,
+				6FD3F5B22875EE4A00015B75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FD3F5B62875EE4A00015B75 /* PBXTargetDependency */,
+			);
+			name = meliTests;
+			productName = meliTests;
+			productReference = 6FD3F5B42875EE4A00015B75 /* meliTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6FD3F5BD2875EE4A00015B75 /* meliUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FD3F5CE2875EE4A00015B75 /* Build configuration list for PBXNativeTarget "meliUITests" */;
+			buildPhases = (
+				6FD3F5BA2875EE4A00015B75 /* Sources */,
+				6FD3F5BB2875EE4A00015B75 /* Frameworks */,
+				6FD3F5BC2875EE4A00015B75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FD3F5C02875EE4A00015B75 /* PBXTargetDependency */,
+			);
+			name = meliUITests;
+			productName = meliUITests;
+			productReference = 6FD3F5BE2875EE4A00015B75 /* meliUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FD3F59C2875EE4800015B75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					6FD3F5A32875EE4800015B75 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					6FD3F5B32875EE4A00015B75 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 6FD3F5A32875EE4800015B75;
+					};
+					6FD3F5BD2875EE4A00015B75 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 6FD3F5A32875EE4800015B75;
+					};
+				};
+			};
+			buildConfigurationList = 6FD3F59F2875EE4800015B75 /* Build configuration list for PBXProject "meli" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6FD3F59B2875EE4800015B75;
+			productRefGroup = 6FD3F5A52875EE4800015B75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FD3F5A32875EE4800015B75 /* meli */,
+				6FD3F5B32875EE4A00015B75 /* meliTests */,
+				6FD3F5BD2875EE4A00015B75 /* meliUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6FD3F5A22875EE4800015B75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD3F5AF2875EE4A00015B75 /* Preview Assets.xcassets in Resources */,
+				6FD3F5AC2875EE4A00015B75 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD3F5B22875EE4A00015B75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD3F5BC2875EE4A00015B75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FD3F5A02875EE4800015B75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD3F5AA2875EE4800015B75 /* ContentView.swift in Sources */,
+				6FD3F5A82875EE4800015B75 /* meliApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD3F5B02875EE4A00015B75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD3F5B92875EE4A00015B75 /* meliTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD3F5BA2875EE4A00015B75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD3F5C32875EE4A00015B75 /* meliUITests.swift in Sources */,
+				6FD3F5C52875EE4A00015B75 /* meliUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6FD3F5B62875EE4A00015B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FD3F5A32875EE4800015B75 /* meli */;
+			targetProxy = 6FD3F5B52875EE4A00015B75 /* PBXContainerItemProxy */;
+		};
+		6FD3F5C02875EE4A00015B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FD3F5A32875EE4800015B75 /* meli */;
+			targetProxy = 6FD3F5BF2875EE4A00015B75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6FD3F5C62875EE4A00015B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6FD3F5C72875EE4A00015B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FD3F5C92875EE4A00015B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"meli/Preview Content\"";
+				DEVELOPMENT_TEAM = SU67294ZM8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidlondonog.meli;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6FD3F5CA2875EE4A00015B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"meli/Preview Content\"";
+				DEVELOPMENT_TEAM = SU67294ZM8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidlondonog.meli;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6FD3F5CC2875EE4A00015B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SU67294ZM8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidlondonog.meliTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/meli.app/meli";
+			};
+			name = Debug;
+		};
+		6FD3F5CD2875EE4A00015B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SU67294ZM8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidlondonog.meliTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/meli.app/meli";
+			};
+			name = Release;
+		};
+		6FD3F5CF2875EE4A00015B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SU67294ZM8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidlondonog.meliUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = meli;
+			};
+			name = Debug;
+		};
+		6FD3F5D02875EE4A00015B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SU67294ZM8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidlondonog.meliUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = meli;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FD3F59F2875EE4800015B75 /* Build configuration list for PBXProject "meli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD3F5C62875EE4A00015B75 /* Debug */,
+				6FD3F5C72875EE4A00015B75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FD3F5C82875EE4A00015B75 /* Build configuration list for PBXNativeTarget "meli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD3F5C92875EE4A00015B75 /* Debug */,
+				6FD3F5CA2875EE4A00015B75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FD3F5CB2875EE4A00015B75 /* Build configuration list for PBXNativeTarget "meliTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD3F5CC2875EE4A00015B75 /* Debug */,
+				6FD3F5CD2875EE4A00015B75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FD3F5CE2875EE4A00015B75 /* Build configuration list for PBXNativeTarget "meliUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD3F5CF2875EE4A00015B75 /* Debug */,
+				6FD3F5D02875EE4A00015B75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FD3F59C2875EE4800015B75 /* Project object */;
+}
