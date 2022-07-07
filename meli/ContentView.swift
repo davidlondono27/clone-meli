@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var text = "MacBook Pro 14 pulgadas"
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .onAppear{
+                print(text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+            }
     }
 }
 
