@@ -22,31 +22,30 @@ struct SearchView: View {
                         HStack {
                             //MARK: Search Layout
                             Image(systemName: "magnifyingglass")
-                                .font(.system(size: 14))
+                                .font(.system(size: 13))
                                 .foregroundColor(Color(ConstantsColors.grayMeli))
                                 .padding(.leading, 10)
                             TextField(text: $search){
                                 Text("Buscar en Mercado Libre")
-                            }.font(.custom(ConstantsFonts.proximaNova, size: 16))
+                            }.font(.custom(ConstantsFonts.proximaNova, size: 15))
                                 .modifier(clearButton(text: $search))
                                 .padding(.vertical, 5)
                                 .padding(.trailing, 10)
-                                
                         }.background(
                             Rectangle()
                                 .foregroundColor(Color(ConstantsColors.whiteMeli))
                                 .cornerRadius(20))
                         Button(action: {hideKeyboard()}){
                             Text("Cancelar")
-                                .font(.custom(ConstantsFonts.proximaNova, size: 16))
+                                .font(.custom(ConstantsFonts.proximaNova, size: 15))
                                 .foregroundColor(Color(ConstantsColors.blackMeli))
-                        }.padding(.top, 5)
+                            }.padding(.top, 5)
                             Spacer()
-                        }.padding(.top, 50)
+                        }.padding(.top, 45)
                         .background(
-                            Rectangle()
-                                .foregroundColor(Color(ConstantsColors.yellowMeli))
-                                .frame(width: width, height: height * 0.1, alignment: .center)
+                        Rectangle()
+                            .foregroundColor(Color(ConstantsColors.yellowMeli))
+                            .frame(width: width, height: height * 0.1, alignment: .center)
                         )
                     Spacer()
                     //MARK: Here is the content
@@ -57,7 +56,15 @@ struct SearchView: View {
             }.navigationBarHidden(true)
                 .ignoresSafeArea()
                 .preferredColorScheme(.light)
-                .background(Color(ConstantsColors.yellowMeli))
+                .background(
+                    VStack {
+                        Rectangle()
+                            .foregroundColor(Color(ConstantsColors.yellowMeli))
+                        Spacer()
+                        Rectangle()
+                            .foregroundColor(Color(ConstantsColors.bgColor))
+                    }
+                    )
                 .onRotate { newOrientation in
                     orientation = newOrientation
                     width = getRect().width
