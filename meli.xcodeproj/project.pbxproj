@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6F5C97C428774B38003919C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5C97C328774B38003919C6 /* Constants.swift */; };
+		6F5C97C72877B89F003919C6 /* ProximaNova.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6F5C97C62877B89F003919C6 /* ProximaNova.otf */; };
+		6F5C97C82877B8A0003919C6 /* ProximaNova.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6F5C97C62877B89F003919C6 /* ProximaNova.otf */; };
+		6F5C97C92877B8A0003919C6 /* ProximaNova.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6F5C97C62877B89F003919C6 /* ProximaNova.otf */; };
 		6FD3F5A82875EE4800015B75 /* meliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD3F5A72875EE4800015B75 /* meliApp.swift */; };
 		6FD3F5AA2875EE4800015B75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD3F5A92875EE4800015B75 /* ContentView.swift */; };
 		6FD3F5AC2875EE4A00015B75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD3F5AB2875EE4A00015B75 /* Assets.xcassets */; };
@@ -37,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		6F5C97C328774B38003919C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6F5C97C62877B89F003919C6 /* ProximaNova.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProximaNova.otf; sourceTree = "<group>"; };
+		6F5C97CA2877B8C0003919C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6FD3F5A42875EE4800015B75 /* meli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD3F5A72875EE4800015B75 /* meliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meliApp.swift; sourceTree = "<group>"; };
 		6FD3F5A92875EE4800015B75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +88,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		6F5C97C528775477003919C6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6F5C97C62877B89F003919C6 /* ProximaNova.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		6FD3F59B2875EE4800015B75 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,7 @@
 		6FD3F5A62875EE4800015B75 /* meli */ = {
 			isa = PBXGroup;
 			children = (
+				6F5C97CA2877B8C0003919C6 /* Info.plist */,
 				6FD3F5D6287629BF00015B75 /* ViewModel */,
 				6FD3F5D5287629B900015B75 /* Resource */,
 				6FD3F5D4287629B400015B75 /* Core */,
@@ -177,6 +191,7 @@
 		6FD3F5D5287629B900015B75 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				6F5C97C528775477003919C6 /* Fonts */,
 				6F5C97C228774B04003919C6 /* Constants */,
 			);
 			path = Resource;
@@ -294,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FD3F5AF2875EE4A00015B75 /* Preview Assets.xcassets in Resources */,
+				6F5C97C72877B89F003919C6 /* ProximaNova.otf in Resources */,
 				6FD3F5AC2875EE4A00015B75 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F5C97C82877B8A0003919C6 /* ProximaNova.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F5C97C92877B8A0003919C6 /* ProximaNova.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +502,8 @@
 				DEVELOPMENT_TEAM = SU67294ZM8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = meli/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "\"\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +533,8 @@
 				DEVELOPMENT_TEAM = SU67294ZM8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = meli/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "\"\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
