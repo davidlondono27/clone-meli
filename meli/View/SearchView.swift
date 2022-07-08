@@ -13,7 +13,6 @@ struct SearchView: View {
     @State var height: CGFloat = 100.0
     @State var search = ""
     var items = ["item 1", "Item 2", "Item 3", "Item 4"]
-    
     var body: some View {
         NavigationView {
             VStack() {
