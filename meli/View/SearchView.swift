@@ -12,6 +12,7 @@ struct SearchView: View {
     @State var width : CGFloat = 10.0
     @State var height: CGFloat = 100.0
     @State var search = ""
+    @StateObject var viewModel : ViewModel = ViewModel()
     var items = ["item 1", "Item 2", "Item 3", "Item 4"]
     var body: some View {
         NavigationView {
@@ -30,6 +31,14 @@ struct SearchView: View {
                                 .modifier(clearButton(text: $search))
                                 .padding(.vertical, 5)
                                 .padding(.trailing, 10)
+                                .onSubmit {
+                                    //MARK: Whitespaces validation
+                                    if (search.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
+                                        print("Introduzca un valor válido")
+                                    } else {
+                                        viewModel.executeAPI(itemqr: search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+                                    }
+                                }
                         }.background(
                             Rectangle()
                                 .foregroundColor(Color(ConstantsColors.whiteMeli))
@@ -48,8 +57,10 @@ struct SearchView: View {
                         )
                     Spacer()
                     //MARK: Here is the content
-                    List(items, id: \.self) {item in
-                        Text(item)
+                    Text("Total: \(viewModel.totalItems)")                    
+                    List(viewModel.itemsJSON, id: \.title) { item in
+                        Text("Item: \(item.id) - \(item.title) por: \(item.price)")
+                        
                     }
                     Spacer()
             }.navigationBarHidden(true)
@@ -87,6 +98,7 @@ extension View {
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
+    
 }
 
 
