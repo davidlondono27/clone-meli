@@ -26,8 +26,10 @@ final class ViewModel: ObservableObject {
                httpResponse.statusCode == 200 {
                 let itemDataModel = try! JSONDecoder().decode(MainResult.self, from: data)
                 print("Items: \(itemDataModel)")
-                self.totalItems = itemDataModel.total_Products.total
-                self.itemsJSON = itemDataModel.products
+                DispatchQueue.main.async {
+                    self.totalItems = itemDataModel.total_Products.total
+                    self.itemsJSON = itemDataModel.products
+                }                
             }
         }.resume()
     }

@@ -22,6 +22,8 @@
 		6FE63F892878F499007B9E4B /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE63F882878F499007B9E4B /* SearchModel.swift */; };
 		6FE63F8E2879028B007B9E4B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE63F8A2878F513007B9E4B /* ViewModel.swift */; };
 		6FE63F902879075A007B9E4B /* ReadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE63F8F2879075A007B9E4B /* ReadData.swift */; };
+		6FE63F922879360B007B9E4B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE63F912879360B007B9E4B /* NetworkManager.swift */; };
+		6FE63F9628793963007B9E4B /* DisconnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE63F9528793963007B9E4B /* DisconnectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		6FE63F882878F499007B9E4B /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		6FE63F8A2878F513007B9E4B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6FE63F8F2879075A007B9E4B /* ReadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadData.swift; sourceTree = "<group>"; };
+		6FE63F912879360B007B9E4B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6FE63F9528793963007B9E4B /* DisconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 		6FD3F5D12876280B00015B75 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6FE63F932879362E007B9E4B /* ModelView */,
 				6FD3F5D72876316C00015B75 /* SearchView.swift */,
 			);
 			path = View;
@@ -192,6 +197,7 @@
 		6FD3F5D4287629B400015B75 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6FE63F912879360B007B9E4B /* NetworkManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -211,6 +217,14 @@
 				6FE63F8A2878F513007B9E4B /* ViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6FE63F932879362E007B9E4B /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				6FE63F9528793963007B9E4B /* DisconnectView.swift */,
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,9 +364,11 @@
 				6FD3F5D82876316C00015B75 /* SearchView.swift in Sources */,
 				6FD3F5A82875EE4800015B75 /* meliApp.swift in Sources */,
 				6FE63F892878F499007B9E4B /* SearchModel.swift in Sources */,
+				6FE63F922879360B007B9E4B /* NetworkManager.swift in Sources */,
 				6FE63F8E2879028B007B9E4B /* ViewModel.swift in Sources */,
 				6F5C97C428774B38003919C6 /* Constants.swift in Sources */,
 				6FE63F902879075A007B9E4B /* ReadData.swift in Sources */,
+				6FE63F9628793963007B9E4B /* DisconnectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

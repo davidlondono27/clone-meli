@@ -13,56 +13,63 @@ struct SearchView: View {
     @State var height: CGFloat = 100.0
     @State var search = ""
     @StateObject var viewModel : ViewModel = ViewModel()
-    var items = ["item 1", "Item 2", "Item 3", "Item 4"]
+    @ObservedObject var networkManager = NetworkManager()
     var body: some View {
         NavigationView {
             VStack() {
-                    HStack(alignment: .top){
-                            Spacer()
-                        HStack {
-                            //MARK: Search Layout
-                            Image(systemName: "magnifyingglass")
-                                .font(.system(size: 13))
-                                .foregroundColor(Color(ConstantsColors.grayMeli))
-                                .padding(.leading, 10)
-                            TextField(text: $search){
-                                Text("Buscar en Mercado Libre")
-                            }.font(.custom(ConstantsFonts.proximaNova, size: 15))
-                                .modifier(clearButton(text: $search))
-                                .padding(.vertical, 5)
-                                .padding(.trailing, 10)
-                                .onSubmit {
-                                    //MARK: Whitespaces validation
-                                    if (search.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
-                                        print("Introduzca un valor válido")
-                                    } else {
-                                        viewModel.executeAPI(itemqr: search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-                                    }
+                HStack(alignment: .top){
+                    //MARK: Main Search Bar Layout
+                        Spacer()
+                    HStack {
+                        //MARK: Search Layout
+                        Image(systemName: "magnifyingglass")
+                            .font(.system(size: 13))
+                            .foregroundColor(Color(ConstantsColors.grayMeli))
+                            .padding(.leading, 10)
+                        TextField(text: $search){
+                            Text(Constants.textFieldTip)
+                        }.font(.custom(ConstantsFonts.proximaNova, size: 15))
+                            .modifier(clearButton(text: $search))
+                            .padding(.vertical, 5)
+                            .padding(.trailing, 10)
+                            .onSubmit {
+                                //MARK: Whitespaces and Network validation
+                                if (networkManager.isConnected && (search.trimmingCharacters(in: .whitespacesAndNewlines) == "")) {
+                                    networkManager.isConnected ? print("Introduzca un valor válido") : print("No tienes conexión a internet")
+                                } else {
+                                    viewModel.executeAPI(itemqr: search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
                                 }
-                        }.background(
-                            Rectangle()
-                                .foregroundColor(Color(ConstantsColors.whiteMeli))
-                                .cornerRadius(20))
-                        Button(action: {hideKeyboard()}){
-                            Text("Cancelar")
-                                .font(.custom(ConstantsFonts.proximaNova, size: 15))
-                                .foregroundColor(Color(ConstantsColors.blackMeli))
-                            }.padding(.top, 5)
-                            Spacer()
-                        }.padding(.top, 45)
-                        .background(
+                            }
+                    }.background(
                         Rectangle()
-                            .foregroundColor(Color(ConstantsColors.yellowMeli))
-                            .frame(width: width, height: height * 0.1, alignment: .center)
-                        )
+                            .foregroundColor(Color(ConstantsColors.whiteMeli))
+                            .cornerRadius(20))
+                    Button(action: {hideKeyboard()}){
+                        Text(Constants.cancel)
+                            .font(.custom(ConstantsFonts.proximaNova, size: 15))
+                            .foregroundColor(Color(ConstantsColors.blackMeli))
+                        }.padding(.top, 5)
+                        Spacer()
+                }.padding(.top, height * 0.05)
+                    .background(Rectangle()
+                        .foregroundColor(Color(ConstantsColors.yellowMeli))
+                        .frame(width: width, height: (height > height * 0.2) ? height * 0.15 : height * 0.2, alignment: .center))
+                Spacer()
+                //MARK: Here is the page content
+                HStack {
+                    Text((viewModel.totalItems == 0) ? Constants.searchTip : "\(viewModel.totalItems) \(Constants.results).") 
+                        .padding(.leading, 10)
+                        .font(.custom(ConstantsFonts.proximaNova, size: 15))
+                        .foregroundColor(Color(ConstantsColors.blackMeli))
                     Spacer()
-                    //MARK: Here is the content
-                    Text("Total: \(viewModel.totalItems)")                    
-                    List(viewModel.itemsJSON, id: \.title) { item in
-                        Text("Item: \(item.id) - \(item.title) por: \(item.price)")
-                        
-                    }
-                    Spacer()
+                }.frame(width: width, height: 40)
+                .background(
+                    Color(ConstantsColors.whiteMeli)
+                        .shadow(color: .gray.opacity(0.6), radius: 2, x: 0, y: 1))
+                List(viewModel.itemsJSON, id: \.title) { item in
+                    Text("Item: \(item.id) - \(item.title) por: \(item.price)")
+                }.foregroundColor(Color(ConstantsColors.grayMeli))
+                Spacer()
             }.navigationBarHidden(true)
                 .ignoresSafeArea()
                 .preferredColorScheme(.light)
@@ -70,6 +77,10 @@ struct SearchView: View {
                     VStack {
                         Rectangle()
                             .foregroundColor(Color(ConstantsColors.yellowMeli))
+                            .frame(width: width, height: height * 0.05, alignment: .top)
+                        Spacer()
+                        Rectangle()
+                            .foregroundColor(Color(ConstantsColors.bgColor))
                         Spacer()
                         Rectangle()
                             .foregroundColor(Color(ConstantsColors.bgColor))
