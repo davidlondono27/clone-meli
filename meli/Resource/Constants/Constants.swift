@@ -12,6 +12,8 @@ class Constants {
     static let cancel = "Cancelar"
     static let searchTip = "Haz tu primera búsqueda"
     static let results = "resultados"
+    static let bestSeller = "MÁS VENDIDO"
+    static let used = "Usado"
 }
 
 class ConstantsColors {
@@ -22,6 +24,7 @@ class ConstantsColors {
     static let grayMeli = "gray_Meli"
     static let blackMeli = "black_Meli"
     static let grayDark = "grayDark_Meli"
+    static let orangeMeli = "orange_Meli"
 }
 
 class ConstantsFonts {

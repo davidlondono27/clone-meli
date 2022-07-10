@@ -39,11 +39,15 @@ struct Product : Decodable {
     var title : String
     var price : Int
     var image : String
+    var tags : [String]
+    var condition : String
     
     enum CodingKeys : String, CodingKey {
         case id
         case title
         case price
         case image = "thumbnail"
+        case tags
+        case condition
     }
 }

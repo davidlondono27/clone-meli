@@ -28,7 +28,8 @@ struct SearchView: View {
                             .padding(.leading, 10)
                         TextField(text: $search){
                             Text(Constants.textFieldTip)
-                        }.font(.custom(ConstantsFonts.proximaNova, size: 15))
+                                .fontWeight(.light)
+                        }.font(.system(size: 15))
                             .modifier(clearButton(text: $search))
                             .padding(.vertical, 5)
                             .padding(.trailing, 10)
@@ -46,7 +47,8 @@ struct SearchView: View {
                             .cornerRadius(20))
                     Button(action: {hideKeyboard()}){
                         Text(Constants.cancel)
-                            .font(.custom(ConstantsFonts.proximaNova, size: 15))
+                            .font(.system(size: 15))
+                            .fontWeight(.light)
                             .foregroundColor(Color(ConstantsColors.blackMeli))
                         }.padding(.top, 5)
                         Spacer()
@@ -57,9 +59,10 @@ struct SearchView: View {
                 Spacer()
                 //MARK: Here is the page content
                 HStack {
-                    Text((viewModel.totalItems == 0) ? Constants.searchTip : "\(viewModel.totalItems) \(Constants.results).") 
+                    Text((viewModel.totalItems == 0) ? Constants.searchTip : "\(viewModel.totalItems) \(Constants.results).")
+                        .fontWeight(.light)
+                        .font(.system(size: 15))
                         .padding(.leading, 10)
-                        .font(.custom(ConstantsFonts.proximaNova, size: 15))
                         .foregroundColor(Color(ConstantsColors.blackMeli))
                     Spacer()
                 }.frame(width: width, height: 40)
@@ -67,7 +70,8 @@ struct SearchView: View {
                     Color(ConstantsColors.whiteMeli)
                         .shadow(color: .gray.opacity(0.6), radius: 2, x: 0, y: 1))
                 List(viewModel.itemsJSON, id: \.title) { item in
-                    Text("Item: \(item.id) - \(item.title) por: \(item.price)")
+//                    Text("Item: \(item.id) - \(item.title) por: \(item.price)")
+                    ItemCardView(image: item.image, title: item.title, price: item.price, tags: item.tags, condition: item.condition)
                 }.foregroundColor(Color(ConstantsColors.grayMeli))
                 Spacer()
             }.navigationBarHidden(true)

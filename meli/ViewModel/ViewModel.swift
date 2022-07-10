@@ -24,8 +24,7 @@ final class ViewModel: ObservableObject {
             if let data = data,
                let httpResponse = response as? HTTPURLResponse,
                httpResponse.statusCode == 200 {
-                let itemDataModel = try! JSONDecoder().decode(MainResult.self, from: data)
-                print("Items: \(itemDataModel)")
+                let itemDataModel = try! JSONDecoder().decode(MainResult.self, from: data)                
                 DispatchQueue.main.async {
                     self.totalItems = itemDataModel.total_Products.total
                     self.itemsJSON = itemDataModel.products
