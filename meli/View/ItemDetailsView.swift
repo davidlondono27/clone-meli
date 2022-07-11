@@ -82,8 +82,8 @@ struct ItemDetailsView: View {
                         }
                     }
                 }
-                
-                List(descriptionViewModel.itemDescription, id: \.description) {i in
+                //MARK: ForEach for create element, list maybe skip the itemDescription
+                ForEach(descriptionViewModel.itemDescription, id: \.description) {i in
                     HStack {
                         Text("\(Constants.description)\n\n\(i.description)")
                         Spacer()
