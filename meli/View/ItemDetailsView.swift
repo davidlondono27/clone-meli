@@ -18,6 +18,7 @@ struct ItemDetailsView: View {
     var body: some View {
         VStack{
             HStack(alignment: .top){
+                //MARK: TopBar Information
                 Button {
                     presentationMode.wrappedValue.dismiss()
                 } label: {
@@ -33,17 +34,63 @@ struct ItemDetailsView: View {
                     .foregroundColor(Color(ConstantsColors.yellowMeli))
                 )
             //MARK: Here is the Item Content
-            Text("Hola!")
             ScrollView{
                 ForEach(itemViewModel.itemDetails, id: \.title) {item in
                     VStack{
-                        Text("Elemento: \(item.title), precio: \(item.price), en condición de \(item.condition)")
+                        if item.condition == "used" {
+                            HStack {
+                                Text("Usado")
+                                    .font(.system(size: 12))
+                                    .fontWeight(.light)
+                                    .foregroundColor(Color(ConstantsColors.grayMeli))
+                                Spacer()
+                            }.padding(.top, 10)
+                        }
+                        
+                        HStack() {
+                            Text(item.title)
+                                .font(.system(size: 15))
+                                .fontWeight(.regular)
+                                .foregroundColor(Color(ConstantsColors.grayDark))
+                            Spacer()
+                        }.padding(.top, 5)
+                        
+                        ScrollView(.horizontal){
+                            HStack(spacing: 10) {
+                                ForEach(item.pictures, id: \.url){index in
+                                    AsyncImage(
+                                        url: URL(string: index.url),
+                                        content: { image in
+                                            image.resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(maxWidth: 400, maxHeight: 400)
+                                        },
+                                        placeholder: {
+                                            ProgressView()
+                                                .frame(width: 400, height: 400)
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                        HStack {
+                            Text("$ \(item.price)")
+                                .font(.system(size: 35))
+                                .fontWeight(.light)
+                                .foregroundColor(Color(ConstantsColors.grayDark))
+                            Spacer()
+                        }
                     }
                 }
+                
                 ForEach(descriptionViewModel.itemDescription, id: \.description) {i in
-                    Text("Description: \(i.description)")
+                    HStack {
+                        Text("\(Constants.description):\n\n\(i.description)")
+                        Spacer()
+                    }.padding(.top, 10)
+                    .padding(.bottom, 20)
                 }
-            }
+            }.frame(width: screen.width * 0.9, alignment: .leading)
             Spacer()
         }.onAppear{
             itemViewModel.getDetails(itemId: id)
@@ -55,7 +102,8 @@ struct ItemDetailsView: View {
             .ignoresSafeArea()
             .preferredColorScheme(.light)
             .frame(maxWidth: .infinity)
-            .background(Color(ConstantsColors.bgColor))
+            .background(Color(ConstantsColors.whiteMeli))
     }
 }
 
+//Text("Elemento: \(item.title), precio: \(item.price), en condición de \(item.condition)")

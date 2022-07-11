@@ -16,6 +16,7 @@ class Constants {
     static let used = "Usado"
     static let itemError = "Error consumiendo servicio ItemDetails"
     static let itemDetailsError = "Error consultando los ItemDetails"
+    static let description = "Descripción:"
 }
 
 class ConstantsColors {
