@@ -14,6 +14,8 @@ class Constants {
     static let results = "resultados"
     static let bestSeller = "MÁS VENDIDO"
     static let used = "Usado"
+    static let itemError = "Error consumiendo servicio ItemDetails"
+    static let itemDetailsError = "Error consultando los ItemDetails"
 }
 
 class ConstantsColors {
@@ -29,4 +31,10 @@ class ConstantsColors {
 
 class ConstantsFonts {
     static let proximaNova = "ProximaNova"
+}
+
+class ConstantsURL {
+    static let searchURL = "https://api.mercadolibre.com/sites/MCO/search?q="
+    static let itemBaseURL = "https://api.mercadolibre.com/items/"
+    static let descriptionURL = "/description"
 }

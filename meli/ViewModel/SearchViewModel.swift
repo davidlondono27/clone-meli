@@ -6,16 +6,15 @@
 //
 
 import Foundation
-import Combine
 
 //MARK: Get data with URL Session
-final class ViewModel: ObservableObject {
+final class SearchViewModel: ObservableObject {
     @Published var totalItems : Int = 0
     @Published var itemsJSON : [Product] = []
 
     func executeAPI(itemqr: String) {
         let urlSession = URLSession.shared
-        let url = URL(string: "https://api.mercadolibre.com/sites/MCO/search?q=\(itemqr)")
+        let url = URL(string: "\(ConstantsURL.searchURL)\(itemqr)")
 
         urlSession.dataTask(with: url!) { data, response, error in
             if let _ = error {

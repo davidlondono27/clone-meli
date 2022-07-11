@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct ItemCardView: View {
-    var image, title : String
+    
+    var itemViewModel: ItemViewModel = ItemViewModel()
+    var descriptionViewModel: DescriptionViewModel = DescriptionViewModel()
+    
+    var id, image, title : String
     var price : Int
     var tags : [String]
     var condition : String
     
     var body: some View {
-        NavigationLink(destination: ItemDetailsView()){
+        NavigationLink(destination: ItemDetailsView(id: id)){
             HStack {
                 AsyncImage(
                     url: URL(string: image),

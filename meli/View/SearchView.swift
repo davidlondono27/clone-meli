@@ -12,7 +12,7 @@ struct SearchView: View {
     @State var width : CGFloat = 10.0
     @State var height: CGFloat = 100.0
     @State var search = ""
-    @StateObject var viewModel : ViewModel = ViewModel()
+    @StateObject var viewModel : SearchViewModel = SearchViewModel()
     @ObservedObject var networkManager = NetworkManager()
     var body: some View {
         NavigationView {
@@ -36,7 +36,7 @@ struct SearchView: View {
                             .onSubmit {
                                 //MARK: Whitespaces and Network validation
                                 if (networkManager.isConnected && (search.trimmingCharacters(in: .whitespacesAndNewlines) == "")) {
-                                    networkManager.isConnected ? print("Introduzca un valor válido") : print("No tienes conexión a internet")
+                                    networkManager.isConnected ? print("Introduzca un valor válido") : print("No hay conexión a internet")
                                 } else {
                                     viewModel.executeAPI(itemqr: search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
                                 }
@@ -71,7 +71,7 @@ struct SearchView: View {
                         .shadow(color: .gray.opacity(0.6), radius: 2, x: 0, y: 1))
                 List(viewModel.itemsJSON, id: \.title) { item in
 //                    Text("Item: \(item.id) - \(item.title) por: \(item.price)")
-                    ItemCardView(image: item.image, title: item.title, price: item.price, tags: item.tags, condition: item.condition)
+                    ItemCardView(id: item.id, image: item.image, title: item.title, price: item.price, tags: item.tags, condition: item.condition)
                 }.foregroundColor(Color(ConstantsColors.grayMeli))
                 Spacer()
             }.navigationBarHidden(true)
