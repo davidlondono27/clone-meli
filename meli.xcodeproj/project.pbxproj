@@ -137,7 +137,6 @@
 				6FD3F5D6287629BF00015B75 /* ViewModel */,
 				6FD3F5D5287629B900015B75 /* Resource */,
 				6FD3F5D4287629B400015B75 /* Core */,
-				6FD3F5D3287629B000015B75 /* Data */,
 				6FD3F5D2287629A900015B75 /* Model */,
 				6FD3F5D12876280B00015B75 /* View */,
 				6FD3F5A72875EE4800015B75 /* meliApp.swift */,
@@ -189,13 +188,6 @@
 				6F3F8805287BAB5C0074C2FC /* ItemModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		6FD3F5D3287629B000015B75 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		6FD3F5D4287629B400015B75 /* Core */ = {
