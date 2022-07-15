@@ -46,7 +46,6 @@ struct ItemDetailsView: View {
                                 Spacer()
                             }.padding(.top, 10)
                         }
-                        
                         HStack() {
                             Text(item.title)
                                 .font(.system(size: 15))
@@ -54,7 +53,6 @@ struct ItemDetailsView: View {
                                 .foregroundColor(Color(ConstantsColors.grayDark))
                             Spacer()
                         }.padding(.top, 5)
-                        
                         ScrollView(.horizontal){
                             HStack(spacing: 10) {
                                 ForEach(item.pictures, id: \.url){index in
