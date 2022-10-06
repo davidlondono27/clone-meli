@@ -89,6 +89,10 @@ struct SearchView: View {
                             .foregroundColor(Color(ConstantsColors.bgColor))
                     }
                     )
+                .onAppear{
+                    width = getRect().width
+                    height = getRect().height
+                }
                 .onRotate { newOrientation in
                     orientation = newOrientation
                     width = getRect().width
