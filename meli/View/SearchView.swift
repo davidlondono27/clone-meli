@@ -29,7 +29,7 @@ struct SearchView: View {
                             .foregroundColor(Color(ConstantsColors.grayMeli))
                             .padding(.leading, 10)
                         TextField(text: $search){
-                            Text(Constants.textFieldTip)
+                            Text(networkManager.isConnected ? Constants.textFieldTip : Constants.textFieldDisconnected)
                                 .fontWeight(.light)
                         }.font(.system(size: 15))
                             .searchable(text: $search)
@@ -40,9 +40,7 @@ struct SearchView: View {
                             .onSubmit {
                                 //MARK: Whitespaces and Network validation
                                 if (search.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
-                                    
                                     print("Debes ingresar algo para buscar")
-                                    
                                 } else {
                                     viewModel.executeAPI(itemqr: search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
                                 }
@@ -69,7 +67,7 @@ struct SearchView: View {
                 if !networkManager.isConnected {
                     DisconnectView()
                 } else {
-                    Group{
+                    VStack {
                         HStack {
                             Text((viewModel.totalItems == 0) ? Constants.searchTip : "\(viewModel.totalItems) \(Constants.results).")
                                 .fontWeight(.light)
@@ -90,6 +88,7 @@ struct SearchView: View {
             }.navigationBarHidden(true)
                 .ignoresSafeArea()
                 .preferredColorScheme(.light)
+                .animation(.easeInOut)
                 .background(
                     VStack {
                         Rectangle()
@@ -104,8 +103,12 @@ struct SearchView: View {
                     }
                     )
                 .onAppear{
+                    networkManager.monitor.start(queue: DispatchQueue(label: "NetworkManager"))
                     width = getRect().width
                     height = getRect().height
+                }
+                .onDisappear{
+                    networkManager.monitor.cancel()
                 }
                 .onRotate { newOrientation in
                     orientation = newOrientation

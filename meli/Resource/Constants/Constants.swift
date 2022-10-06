@@ -9,6 +9,7 @@ import Foundation
 
 class Constants {
     static let textFieldTip = "Buscar en Mercado Libre"
+    static let textFieldDisconnected = "Debes tener conexión a internet"
     static let cancel = "Cancelar"
     static let searchTip = "Haz tu primera búsqueda"
     static let results = "resultados"
@@ -17,6 +18,8 @@ class Constants {
     static let itemError = "Error consumiendo servicio ItemDetails"
     static let itemDetailsError = "Error consultando los ItemDetails"
     static let description = "Descripción"
+    static let disconnectedText = "¡Parece que no hay internet!"
+    static let reviewConnection = "Revisa tu conexión para seguir navegando."
 }
 
 class ConstantsColors {
@@ -34,8 +37,16 @@ class ConstantsFonts {
     static let proximaNova = "ProximaNova"
 }
 
+class ConstantsImages {
+    static let DisconnectedCat = "DisconnectedCat"
+}
+
 class ConstantsURL {
     static let searchURL = "https://api.mercadolibre.com/sites/MCO/search?q="
     static let itemBaseURL = "https://api.mercadolibre.com/items/"
     static let descriptionURL = "/description"
+}
+
+class ConstantsConfiguration {
+    static let queueConnection = "NetworkManager"
 }
