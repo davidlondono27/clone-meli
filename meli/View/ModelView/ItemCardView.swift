@@ -36,16 +36,7 @@ struct ItemCardView: View {
                 VStack(alignment: .leading, spacing: 5) {
                     Spacer()
                     if tags.contains("best_seller_candidate") {
-                    Text(Constants.bestSeller)
-                        .font(.system(size: 10))
-                        .fontWeight(.medium)
-                        .padding(.all, 3)
-                        .foregroundColor(Color(ConstantsColors.whiteMeli))
-                        .background{
-                            Rectangle()
-                                .foregroundColor(Color(ConstantsColors.orangeMeli))
-                                .cornerRadius(3)
-                        }
+                        bestSeller()
                     }
                     Text(title)
                         .font(.system(size: 14))
@@ -59,11 +50,7 @@ struct ItemCardView: View {
                         .lineLimit(1)
                         .foregroundColor(Color(ConstantsColors.blackMeli))
                     if condition == "used" {
-                    Text(Constants.used)
-                        .font(.system(size: 12))
-                        .fontWeight(.medium)
-                        .padding(.vertical, 3)
-                        .foregroundColor(Color(ConstantsColors.blueMeli))
+                        used()
                     }
                     Spacer()
                 }.padding(.leading, 5)

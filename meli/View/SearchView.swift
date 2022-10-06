@@ -12,8 +12,10 @@ struct SearchView: View {
     @State var width : CGFloat = 10.0
     @State var height: CGFloat = 100.0
     @State var search = ""
+    @State var disabled = false
     @StateObject var viewModel : SearchViewModel = SearchViewModel()
     @ObservedObject var networkManager = NetworkManager()
+    
     var body: some View {
         NavigationView {
             VStack() {
@@ -27,20 +29,24 @@ struct SearchView: View {
                             .foregroundColor(Color(ConstantsColors.grayMeli))
                             .padding(.leading, 10)
                         TextField(text: $search){
-                            Text(Constants.textFieldTip)
+                            Text(networkManager.isConnected ? Constants.textFieldTip : Constants.textFieldDisconnected)
                                 .fontWeight(.light)
                         }.font(.system(size: 15))
+                            .searchable(text: $search)
                             .modifier(clearButton(text: $search))
                             .padding(.vertical, 5)
                             .padding(.trailing, 10)
+                            .disabled(!networkManager.isConnected)
                             .onSubmit {
                                 //MARK: Whitespaces and Network validation
-                                if (networkManager.isConnected && (search.trimmingCharacters(in: .whitespacesAndNewlines) == "")) {
-                                    networkManager.isConnected ? print("Introduzca un valor válido") : print("No hay conexión a internet")
+                                if (search.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
+                                    print("Debes ingresar algo para buscar")
                                 } else {
                                     viewModel.executeAPI(itemqr: search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
                                 }
                             }
+                            .submitLabel(.search)
+                        
                     }.background(
                         Rectangle()
                             .foregroundColor(Color(ConstantsColors.whiteMeli))
@@ -58,24 +64,31 @@ struct SearchView: View {
                         .frame(width: width, height: (height > height * 0.2) ? height * 0.15 : height * 0.2, alignment: .center))
                 Spacer()
                 //MARK: Here is the page content
-                HStack {
-                    Text((viewModel.totalItems == 0) ? Constants.searchTip : "\(viewModel.totalItems) \(Constants.results).")
-                        .fontWeight(.light)
-                        .font(.system(size: 15))
-                        .padding(.leading, 10)
-                        .foregroundColor(Color(ConstantsColors.blackMeli))
-                    Spacer()
-                }.frame(width: width, height: 40)
-                .background(
-                    Color(ConstantsColors.whiteMeli)
-                        .shadow(color: .gray.opacity(0.6), radius: 2, x: 0, y: 1))
-                List(viewModel.itemsJSON, id: \.title) { item in
-                    ItemCardView(id: item.id, image: item.image, title: item.title, price: item.price, tags: item.tags, condition: item.condition)
-                }.foregroundColor(Color(ConstantsColors.grayMeli))
-                Spacer()
+                if !networkManager.isConnected {
+                    DisconnectView()
+                } else {
+                    VStack {
+                        HStack {
+                            Text((viewModel.totalItems == 0) ? Constants.searchTip : "\(viewModel.totalItems) \(Constants.results).")
+                                .fontWeight(.light)
+                                .font(.system(size: 15))
+                                .padding(.leading, 10)
+                                .foregroundColor(Color(ConstantsColors.blackMeli))
+                            Spacer()
+                        }.frame(width: width, height: 40)
+                        .background(
+                            Color(ConstantsColors.whiteMeli)
+                                .shadow(color: .gray.opacity(0.6), radius: 2, x: 0, y: 1))
+                        List(viewModel.itemsJSON, id: \.title) { item in
+                            ItemCardView(id: item.id, image: item.image, title: item.title, price: item.price, tags: item.tags, condition: item.condition)
+                        }.foregroundColor(Color(ConstantsColors.grayMeli))
+                        Spacer()
+                    }
+                }
             }.navigationBarHidden(true)
                 .ignoresSafeArea()
                 .preferredColorScheme(.light)
+                .animation(.easeInOut)
                 .background(
                     VStack {
                         Rectangle()
@@ -90,8 +103,12 @@ struct SearchView: View {
                     }
                     )
                 .onAppear{
+                    networkManager.monitor.start(queue: DispatchQueue(label: "NetworkManager"))
                     width = getRect().width
                     height = getRect().height
+                }
+                .onDisappear{
+                    networkManager.monitor.cancel()
                 }
                 .onRotate { newOrientation in
                     orientation = newOrientation

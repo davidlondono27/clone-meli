@@ -10,8 +10,8 @@ import Network
 
 class NetworkManager: ObservableObject {
     let monitor = NWPathMonitor()
-    let queue = DispatchQueue(label: "NetworkManager")
     @Published var isConnected = true
+    
     init() {
         monitor.pathUpdateHandler = { path in
             DispatchQueue.main.sync {
@@ -19,7 +19,5 @@ class NetworkManager: ObservableObject {
             }
             print("Validando red...")
         }
-        monitor.start(queue: queue)
-        monitor.cancel()
     }
 }

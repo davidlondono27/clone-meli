@@ -11,7 +11,6 @@ import SwiftUI
 struct meliApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
             SearchView()
         }
     }
