@@ -88,7 +88,7 @@ struct SearchView: View {
             }.navigationBarHidden(true)
                 .ignoresSafeArea()
                 .preferredColorScheme(.light)
-                .animation(.easeInOut)
+                .animation(.easeInOut, value: networkManager.isConnected)
                 .background(
                     VStack {
                         Rectangle()
