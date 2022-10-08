@@ -1,6 +1,10 @@
 # Documentation
 
-HIstoria del arte e investigación de marca en:
+Desarrollador:
+[https://davidlondonog.com/swift](https://davidlondonog.com/swift)
+
+
+Historia del arte e investigación de marca en:
 
 [https://github.com/davidlondono27/clone-meli/wiki](https://github.com/davidlondono27/clone-meli/wiki)
 
